@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 let fileContent = fs.readFileSync('php.ini').toString()
-let regex = /.*=.*/gm
+let regex = /^[[\w][^\n]*/gm
 let found = fileContent.match(regex)
 let configFile = 'result.json'
 
@@ -16,3 +16,4 @@ fs.writeFile(configFile, JSON.stringify(found, null, '\t'), (err) => {
 })
 
 console.log(found)
+
