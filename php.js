@@ -15,5 +15,3 @@ fs.writeFile(configFile, JSON.stringify(found, null, '\t'), (err) => {
     if (err) throw err;
 })
 
-console.log(found)
-
