@@ -14,4 +14,3 @@ fs.open(configFile, 'w+', function (err, f) {
 fs.writeFile(configFile, JSON.stringify(found, null, '\t'), (err) => {
     if (err) throw err;
 })
-
